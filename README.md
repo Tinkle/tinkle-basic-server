@@ -71,4 +71,3 @@ curl -X POST http://localhost:3000/api/email/receive \
 # 获取缓存的文本
 curl http://localhost:3000/api/email/cached
 ```
-
