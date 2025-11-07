@@ -1,0 +1,17 @@
+{
+  "name": "email-receive",
+  "version": "1.0.0",
+  "description": "简单的邮件接收服务",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["email", "receive"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
