@@ -56,6 +56,15 @@ app.get('/api/email/cached', (req, res) => {
   });
 });
 
+// Ping接口：用于测试服务是否正常运行
+app.get('/ping', (req, res) => {
+  res.json({
+    pong: true,
+    message: '服务运行正常',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // 健康检查接口
 app.get('/health', (req, res) => {
   res.json({
@@ -67,6 +76,7 @@ app.get('/health', (req, res) => {
 // 启动服务器
 app.listen(PORT, () => {
   console.log(`邮件接收服务已启动，监听端口: ${PORT}`);
+  console.log(`Ping接口: http://localhost:${PORT}/ping`);
   console.log(`POST接口: http://localhost:${PORT}/api/email/receive`);
   console.log(`GET接口: http://localhost:${PORT}/api/email/cached`);
 });
